@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html>
+	<head>
+		<link href="resources/webpage.css" rel="stylesheet" />
+		<meta charset="utf-8" />
+		<script src="scripts/main.standalone.js" type="text/javascript"></script>
+		<title>Julia Set Visualizer</title>
+	</head>
+	<body data-logic="app">
+		<canvas data-logic="canvas" width="{w}" height="{h}"></canvas>
+		<div class="menu">
+			<div class="grid">
+				<div class="grid-row">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Real:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider" data-scope="real">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Imaginary:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider" data-scope="imaginary">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Exponent:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider" data-scope="exponent">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Iterations:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider" data-scope="iterations">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Smooth:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="option" data-logic="option" data-scope="hq">
+							<div class="option-knob"></div>
+						</div>
+					</div>
+				</div>
+				<div data-scope="colors">
+					<div class="grid-row">
+						<div class="grid-cell-03">
+							<div class="label">
+								<p class="label-title">Color:</p>
+							</div>
+						</div>
+						<div class="grid-cell-09">
+							<div class="color" data-logic="color" style="background-color: rgb({r}, {g}, {b});"></div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-cell-12">
+						<div class="button" data-logic="add">
+							<p class="button-title">Add color</p>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row" data-scope="red">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Red:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row" data-scope="green">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Green:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-row" data-scope="blue">
+					<div class="grid-cell-03">
+						<div class="label">
+							<p class="label-title">Blue:</p>
+						</div>
+					</div>
+					<div class="grid-cell-09">
+						<div class="slider">
+							<div class="slider-area" data-logic="slider">
+								<div class="slider-line">
+									<div class="slider-knob" style="left: {left}%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+{
+	"w" : 0,
+	"h" : 0,
+	"k" : 320,
+	"real" :
+	{
+		"lower" : -1.0,
+		"upper" : 1.0,
+		"value" : 0.0
+	},
+	"imaginary" :
+	{
+		"lower" : -1.0,
+		"upper" : 1.0,
+		"value" : -0.85
+	},
+	"exponent" :
+	{
+		"lower" : 2.0,
+		"upper" : 10.0,
+		"step" : 1.0,
+		"value" : 6.0
+	},
+	"iterations" :
+	{
+		"lower" : 1.0,
+		"upper" : 128.0,
+		"step" : 1.0,
+		"value" : 32.0
+	},
+	"hq" :
+	{
+		"value" : false
+	},
+	"colors" :
+	[
+		{
+			"r" : 95,
+			"g" : 143,
+			"b" : 169
+		},
+		{
+			"r" : 255,
+			"g" : 255,
+			"b" : 255
+		}
+	]
+}

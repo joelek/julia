@@ -1,0 +1,9 @@
+exports.attributes = require('./attributes/attributes.js');
+exports.buffers = require('./buffers/buffers.js');
+exports.helpers = require('./helpers/helpers.js');
+exports.math = require('./math/math.js');
+exports.shaders = require('./shaders/shaders.js');
+exports.shapes = require('./shapes/shapes.js');
+exports.textures = require('./textures/textures.js');
+exports.uniforms = require('./uniforms/uniforms.js');
+exports.program_t = require('./program_t.js');
