@@ -1,4 +1,4 @@
-var webgl = require('../webgl/index.js');
+var webgl = require('<webgl>');
 var julia_t = require('../julia/julia_t.js');
 
 var logic = function (model, scope)

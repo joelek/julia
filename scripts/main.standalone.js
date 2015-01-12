@@ -319,11 +319,10 @@
 		db[91].config['./vs.glsl'] = 93;
 		db[90] = { 'config' : {}, 'module' : { 'exports' : {} } };
 		db[90].config['<scaffold>'] = 4;
-		db[90].config['../webgl/program_t.js'] = 89;
+		db[90].config['<webgl>'] = 55;
 		db[90].config['./sources.js'] = 91;
-		db[90].config['../webgl/shaders/shaders.js'] = 72;
 		db[54] = { 'config' : {}, 'module' : { 'exports' : {} } };
-		db[54].config['../webgl/index.js'] = 55;
+		db[54].config['<webgl>'] = 55;
 		db[54].config['../julia/julia_t.js'] = 90;
 		db[94] = { 'config' : {}, 'module' : { 'exports' : {} } };
 		db[95] = { 'config' : {}, 'module' : { 'exports' : {} } };
@@ -4437,9 +4436,8 @@
 	(function (exports, global, module, require)
 	{
 		var scaffold = require('<scaffold>');
-		var program_t = require('../webgl/program_t.js');
+		var webgl = require('<webgl>');
 		var sources = require('./sources.js');
-		var shaders = require('../webgl/shaders/shaders.js');
 
 		var julia_t = function julia_t(context)
 		{
@@ -4449,20 +4447,20 @@
 			scaffold.check(arguments.length === 1);
 			scaffold.check.type(context, global.WebGLRenderingContext);
 
-			fs = new shaders.fragment_t(context, sources.fs);
-			vs = new shaders.vertex_t(context, sources.vs);
+			fs = new webgl.shaders.fragment_t(context, sources.fs);
+			vs = new webgl.shaders.vertex_t(context, sources.vs);
 
-			program_t.call(this, context, fs, vs);
+			webgl.program_t.call(this, context, fs, vs);
 		};
 
-		scaffold.types.extend(julia_t, program_t);
+		scaffold.types.extend(julia_t, webgl.program_t);
 
 		module.exports = julia_t;
 	})(exports(90), global, module(90), require(90));
 
 	(function (exports, global, module, require)
 	{
-		var webgl = require('../webgl/index.js');
+		var webgl = require('<webgl>');
 		var julia_t = require('../julia/julia_t.js');
 
 		var logic = function (model, scope)
